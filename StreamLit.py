@@ -3,10 +3,13 @@ import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
+import requests 
 st.markdown("")
 # st.sidebar.title("Select Visual Charts")
+url = "https://github.com/arun-099/Uber/blob/main/Case%20Preso%20-%20Data_Unfiltered.csv"
+s = requests.get(url).content
 
-data_original = pd.read_csv("C:\\Users\\Asus-2020\\Desktop\\Uber\\Case Preso - Data.csv")
+data_original = pd.read_csv(s)
 data = data_original.dropna()
 
 st.sidebar.markdown("Select the Charts/Plots accordingly:")
