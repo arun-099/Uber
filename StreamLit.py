@@ -3,6 +3,7 @@ import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
+import io
 import requests 
 st.markdown("")
 # st.sidebar.title("Select Visual Charts")
