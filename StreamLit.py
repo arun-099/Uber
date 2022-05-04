@@ -6,7 +6,7 @@ import numpy as np
 import requests 
 st.markdown("")
 # st.sidebar.title("Select Visual Charts")
-url = "https://github.com/arun-099/Uber/blob/main/Case%20Preso%20-%20Data_Unfiltered.csv"
+url = "https://github.com/arun-099/Uber/blob/main/data.csv"
 s = requests.get(url).content
 
 data_original = pd.read_csv(s)
