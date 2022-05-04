@@ -6,10 +6,11 @@ import numpy as np
 import requests 
 st.markdown("")
 # st.sidebar.title("Select Visual Charts")
-url = "https://github.com/arun-099/Uber/blob/main/data.csv"
-s = requests.get(url).content
+url = "https://raw.githubusercontent.com/arun-099/Uber/main/data.csv"
 
-data_original = pd.read_csv(s)
+s=requests.get(url).content
+
+data_original=pd.read_csv(io.StringIO(s.decode('utf-8')), sep=",")
 data = data_original.dropna()
 
 st.sidebar.markdown("Select the Charts/Plots accordingly:")
