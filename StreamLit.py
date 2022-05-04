@@ -5,8 +5,12 @@ import plotly.graph_objects as go
 import numpy as np
 st.markdown("")
 # st.sidebar.title("Select Visual Charts")
+import requests 
+url = ""
+url = 
+s = requests.get(url).content
 
-data_original = pd.read_csv("Case Preso - Data.csv")
+data_original = pd.read_csv(s)
 data = data_original.dropna()
 
 st.sidebar.markdown("Select the Charts/Plots accordingly:")
