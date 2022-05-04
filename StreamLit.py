@@ -3,9 +3,9 @@ import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
+import requests 
 st.markdown("")
 # st.sidebar.title("Select Visual Charts")
-import requests 
 url = "https://github.com/arun-099/Uber/blob/main/Case%20Preso%20-%20Data_Unfiltered.csv"
 s = requests.get(url).content
 
